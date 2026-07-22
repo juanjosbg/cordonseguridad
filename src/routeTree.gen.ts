@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TrabajeConNosotrosRouteImport } from './routes/trabaje-con-nosotros'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
 import { Route as PqrsRouteImport } from './routes/pqrs'
@@ -19,6 +20,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TrabajeConNosotrosRoute = TrabajeConNosotrosRouteImport.update({
   id: '/trabaje-con-nosotros',
   path: '/trabaje-con-nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServiciosRoute = ServiciosRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/pqrs': typeof PqrsRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/trabaje-con-nosotros': typeof TrabajeConNosotrosRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/pqrs': typeof PqrsRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/trabaje-con-nosotros': typeof TrabajeConNosotrosRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/pqrs': typeof PqrsRoute
   '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/trabaje-con-nosotros': typeof TrabajeConNosotrosRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/pqrs'
     | '/quienes-somos'
     | '/servicios'
+    | '/sitemap.xml'
     | '/trabaje-con-nosotros'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/pqrs'
     | '/quienes-somos'
     | '/servicios'
+    | '/sitemap.xml'
     | '/trabaje-con-nosotros'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/pqrs'
     | '/quienes-somos'
     | '/servicios'
+    | '/sitemap.xml'
     | '/trabaje-con-nosotros'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   PqrsRoute: typeof PqrsRoute
   QuienesSomosRoute: typeof QuienesSomosRoute
   ServiciosRoute: typeof ServiciosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TrabajeConNosotrosRoute: typeof TrabajeConNosotrosRoute
 }
 
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/trabaje-con-nosotros'
       fullPath: '/trabaje-con-nosotros'
       preLoaderRoute: typeof TrabajeConNosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servicios': {
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   PqrsRoute: PqrsRoute,
   QuienesSomosRoute: QuienesSomosRoute,
   ServiciosRoute: ServiciosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TrabajeConNosotrosRoute: TrabajeConNosotrosRoute,
 }
 export const routeTree = rootRouteImport
