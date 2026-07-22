@@ -76,7 +76,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white text-6xl md:text-8xl lg:text-9xl font-black leading-[0.9] tracking-tighter max-w-5xl"
+            className="text-white text-6xl md:text-6xl lg:text-8xl font-black leading-[0.9] tracking-tighter max-w-6xl"
           >
             Vigilancia<br />
             <span className="text-brand-red">constante,</span><br />

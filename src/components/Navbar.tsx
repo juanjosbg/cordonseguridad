@@ -33,7 +33,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-20">
+      <div className="container-page flex h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group">
           <div className={`grid place-items-center h-11 w-11 rounded-lg transition-colors ${
             scrolled ? "bg-brand-red" : "bg-brand-red"
@@ -50,7 +50,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden items-center gap-10 lg:flex">
           {links.map((l) => (
             <Link
               key={l.to}
