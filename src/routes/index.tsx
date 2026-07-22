@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Cordón de Seguridad Ltda — Vigilancia y Seguridad Privada en Cali" },
       { name: "description", content: "Empresa de vigilancia y seguridad privada en Cali. Servicios de vigilancia fija, móvil, escolta y monitoreo con tecnología de punta." },
-      { property: "og:title", content: "Cordón de Seguridad Ltda — Seguridad Privada en Cali" },
-      { property: "og:description", content: "Vigilancia constante, confianza permanente. Protegemos lo que más valoras con talento humano capacitado y tecnología de punta." },
+      { property: "og:title", content: "Cordón de Seguridad Ltda — Vigilancia y Seguridad Privada en Cali" },
+      { property: "og:description", content: "Empresa de vigilancia y seguridad privada en Cali. Servicios de vigilancia fija, móvil, escolta y monitoreo con tecnología de punta." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
     ],
