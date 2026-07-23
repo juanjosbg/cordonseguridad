@@ -4,7 +4,8 @@ import { motion } from "motion/react";
 import { HelpCircle, MessageSquareWarning, AlertOctagon, Lightbulb, Send, ShieldAlert } from "lucide-react";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
-import controlImg from "@/assets/control-room.jpg";
+
+const controlImg = "/photos/DSC08865.jpg";
 
 export const Route = createFileRoute("/pqrs")({
   head: () => ({

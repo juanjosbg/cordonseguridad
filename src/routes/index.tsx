@@ -7,11 +7,12 @@ import {
 } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
-import heroImg from "@/assets/hero-guard.jpg";
-import teamImg from "@/assets/team.jpg";
+import heroImg from "@/assets/control-room.jpg";
 import controlImg from "@/assets/control-room.jpg";
 import techImg from "@/assets/technology.jpg";
 import patrolImg from "@/assets/patrol.jpg";
+
+const teamImg = "/photos/DSC07775.JPG";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,9 +67,9 @@ function HomePage() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="flex items-center gap-3 mb-6"
+            className="relative top-4 flex items-center gap-3 mb-6"
           >
-            <span className="h-[2px] w-14 bg-brand-red" />
+            <span className="h-0.5 w-14 bg-brand-red" />
             <span className="text-brand-red font-bold tracking-[0.3em] text-sm">CALI · COLOMBIA</span>
           </motion.div>
 
@@ -76,7 +77,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white text-6xl md:text-6xl lg:text-8xl font-black leading-[0.9] tracking-tighter max-w-6xl"
+            className="text-white text-6xl md:text-6xl lg:text-8xl font-black leading-[0.9] tracking-tighter mt-5"
           >
             Vigilancia<br />
             <span className="text-brand-red">constante,</span><br />
@@ -90,23 +91,9 @@ function HomePage() {
             transition={{ delay: 0.9, duration: 0.7 }}
             className="mt-8 max-w-xl text-lg text-white/80"
           >
-            Empresa de vigilancia y seguridad privada en Cali. Soluciones proactivas e integrales para las empresas del sector público y privado.
+            Empresa de vigilancia y seguridad privada en Cali. <br/>
+            Soluciones proactivas e integrales para las empresas del sector público y privado.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.7 }}
-            className="mt-10 flex flex-wrap gap-4"
-          >
-            <Link to="/servicios" className="group inline-flex items-center gap-3 bg-brand-red text-white px-8 py-4 rounded-full font-bold shadow-2xl shadow-red-500/30 hover:scale-105 transition-transform pulse-red">
-              Contrata nuestros servicios
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link to="/contacto" className="inline-flex items-center gap-3 border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-ink transition-colors">
-              Cotización gratis
-            </Link>
-          </motion.div>
         </motion.div>
 
         <motion.div
@@ -119,16 +106,16 @@ function HomePage() {
           <motion.span
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.6 }}
-            className="h-8 w-[1px] bg-white/50"
+            className="h-8 w-[px] bg-white/50"
           />
         </motion.div>
       </section>
 
       {/* MARQUEE */}
-      <div className="bg-brand-red text-white overflow-hidden py-5">
+      <div className="bg-brand-red text-white overflow-hidden py-4">
         <div className="flex animate-marquee whitespace-nowrap">
           {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-12 pr-12 text-lg font-black tracking-widest">
+            <div key={i} className="flex items-center gap-12 pr-12 text-md font-medium tracking-widest">
               {["VIGILANCIA 24/7", "•", "SEGURIDAD PRIVADA", "•", "MONITOREO CCTV", "•", "ESCOLTAS CERTIFICADOS", "•", "TECNOLOGÍA DE PUNTA", "•", "CALI COLOMBIA", "•"].map((t, j) => (
                 <span key={j}>{t}</span>
               ))}
@@ -138,8 +125,17 @@ function HomePage() {
       </div>
 
       {/* ABOUT INTRO */}
-      <section className="py-28 relative">
-        <div className="container-page grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative overflow-hidden py-28">
+        <div
+          className="pointer-events-none absolute inset-0 bg-center bg-repeat opacity-40"
+          style={{
+            backgroundImage:
+              'url("/waves/6963ff78080e767b361e3fe6_cuadricula.svg")',
+            backgroundSize: "720px auto",
+          }}
+          aria-hidden="true"
+        />
+        <div className="container-page relative z-10 grid items-center gap-16 lg:grid-cols-2">
           <Reveal>
             <p className="eyebrow">Quiénes Somos</p>
             <h2 className="mt-4 text-5xl md:text-6xl font-black tracking-tight text-brand-ink leading-tight">
@@ -285,9 +281,15 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 parallax-bg" style={{ backgroundImage: `url(${patrolImg})` }} />
-        <div className="absolute inset-0 bg-brand-red/90" />
+      <section className="relative py-28 overflow-hidden bg-black">
+        <div
+          className="absolute inset-0 parallax-bg"
+          style={{
+            backgroundImage:
+              'url("/waves/Fondo de pantalla CDS_Mesa de trabajo 1 copia 2.jpg")',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black" />
         <div className="container-page relative z-10 text-center text-white">
           <Reveal>
             <p className="text-sm font-bold tracking-[0.3em] uppercase">Contáctanos ya</p>

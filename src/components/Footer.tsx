@@ -1,68 +1,88 @@
 import { Link } from "@tanstack/react-router";
-import { Shield, Mail, Phone, MapPin, Instagram, Facebook, Globe } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-brand-ink text-white relative overflow-hidden">
+    <footer className="relative overflow-hidden bg-black text-white">
       <div className="absolute inset-x-0 top-0 slash-divider" />
-      <div className="container-page py-16 grid gap-12 lg:grid-cols-4">
-        <div>
-          <div className="flex items-center gap-2.5 mb-4">
-            <div className="grid place-items-center h-11 w-11 rounded-lg bg-brand-red">
-              <Shield className="h-6 w-6 text-white" strokeWidth={2.5} />
-            </div>
+
+      <div className="container-page flex flex-col gap-14 py-20 md:flex-row md:items-start md:justify-between md:gap-0 lg:py-24">
+        <div className="flex flex-col items-start md:w-[36%] md:shrink-0">
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo/CordonDeSeguridad_LogoSimbolo04.png"
+              alt="Símbolo de Cordón de Seguridad"
+              className="h-12 w-auto"
+            />
             <div className="leading-tight">
-              <div className="text-base font-black">CORDÓN DE</div>
-              <div className="text-[11px] font-bold tracking-widest text-brand-red">SEGURIDAD LTDA</div>
+              <div className="text-lg font-black">CORDÓN DE</div>
+              <div className="text-xs font-bold tracking-widest">SEGURIDAD LTDA</div>
             </div>
           </div>
-          <p className="text-sm text-white/70 leading-relaxed">
-            Vigilancia constante, confianza permanente. Empresa de vigilancia y seguridad privada en Cali, Colombia.
+
+          <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
+            Vigilancia constante, confianza permanente. <br/>
+            Empresa de vigilancia y
+            seguridad privada en Cali, Colombia.
           </p>
+
+          <div className="mt-16 space-y-6 text-sm text-white/60">
+            <Link to="/pqrs" className="block transition-colors hover:text-white">
+              Política de tratamiento de datos personales
+            </Link>
+            <p>
+              © {new Date().getFullYear()} Cordón de Seguridad Ltda. Todos los
+              derechos reservados.
+            </p>
+          </div>
         </div>
 
-        <div>
-          <h4 className="text-sm font-bold uppercase tracking-widest text-brand-red mb-4">Enlaces</h4>
-          <ul className="space-y-2 text-sm text-white/80">
-            <li><Link to="/quienes-somos" className="hover:text-brand-red">Quiénes Somos</Link></li>
-            <li><Link to="/servicios" className="hover:text-brand-red">Servicios</Link></li>
-            <li><Link to="/pqrs" className="hover:text-brand-red">PQRS</Link></li>
-            <li><Link to="/trabaje-con-nosotros" className="hover:text-brand-red">Trabaja con Nosotros</Link></li>
-            <li><Link to="/contacto" className="hover:text-brand-red">Contacto</Link></li>
+        <nav aria-label="Enlaces del pie de página" className="md:w-auto md:shrink-0 md:pt-2">
+          <ul className="space-y-4 text-sm text-white/85">
+            <li><Link to="/" className="transition-colors hover:text-brand-red">Inicio</Link></li>
+            <li><Link to="/quienes-somos" className="transition-colors hover:text-brand-red">Quiénes Somos</Link></li>
+            <li><Link to="/servicios" className="transition-colors hover:text-brand-red">Servicios</Link></li>
+            <li><Link to="/pqrs" className="transition-colors hover:text-brand-red">PQRS</Link></li>
+            <li><Link to="/trabaje-con-nosotros" className="transition-colors hover:text-brand-red">Trabaja con Nosotros</Link></li>
+            <li><Link to="/contacto" className="transition-colors hover:text-brand-red">Contacto</Link></li>
           </ul>
-        </div>
+        </nav>
 
-        <div>
-          <h4 className="text-sm font-bold uppercase tracking-widest text-brand-red mb-4">Contacto</h4>
-          <ul className="space-y-3 text-sm text-white/80">
-            <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-brand-red" /> 317 428 0680</li>
-            <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-brand-red" /> informacion@cordonseguridadltda.com.co</li>
-            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-brand-red" /> Avenida 5 Norte # 22N-26, Piso 6. Barrio San Vicente, Cali, Valle.</li>
-            <li className="flex items-start gap-2"><Globe className="h-4 w-4 mt-0.5 text-brand-red" /> cordonseguridadltda.com.co</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-sm font-bold uppercase tracking-widest text-brand-red mb-4">Síguenos</h4>
-          <div className="flex gap-3">
-            <a href="#" className="grid place-items-center h-10 w-10 rounded-full border border-white/20 hover:bg-brand-red hover:border-brand-red transition-colors">
-              <Instagram className="h-4 w-4" />
+        <div className="md:w-[30%] md:shrink-0 md:pt-2">
+          <div className="text-sm leading-relaxed text-white/85">
+            <h3 className="font-black text-white">Sede Cali:</h3>
+            <p>Avenida 5 Norte # 22N-26, Piso 6.</p>
+            <p>Barrio San Vicente, Cali, Valle.</p>
+            <a
+              href="tel:3174280680"
+              className="transition-colors hover:text-brand-red"
+            >
+              Tel: 317 428 0680
             </a>
-            <a href="#" className="grid place-items-center h-10 w-10 rounded-full border border-white/20 hover:bg-brand-red hover:border-brand-red transition-colors">
-              <Facebook className="h-4 w-4" />
+            <a
+              href="mailto:informacion@cordonseguridadltda.com.co"
+              className="mt-4 block break-all transition-colors hover:text-brand-red"
+            >
+              informacion@cordonseguridadltda.com.co
             </a>
           </div>
-          <p className="text-xs text-white/50 mt-6">
-            Denuncia anónima:<br />
-            <a href="/pqrs" className="text-brand-red font-semibold">Canal seguro 24/7</a>
-          </p>
-        </div>
-      </div>
 
-      <div className="border-t border-white/10">
-        <div className="container-page py-6 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Cordón de Seguridad Ltda. Todos los derechos reservados.</p>
-          <p>Vigilancia constante, confianza permanente.</p>
+          <div className="mt-12 flex gap-3">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white text-black transition-colors hover:bg-brand-red hover:text-white"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white text-black transition-colors hover:bg-brand-red hover:text-white"
+            >
+              <Facebook className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

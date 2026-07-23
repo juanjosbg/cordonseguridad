@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
-import heroImg from "@/assets/hero-guard.jpg";
+
+const heroImg = "/photos/FAPT0098.jpg";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({

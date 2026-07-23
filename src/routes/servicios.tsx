@@ -69,31 +69,6 @@ function Page() {
           </div>
         </div>
       </section>
-
-      {/* HIRE US */}
-      <section className="py-24 bg-brand-ink relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-red/20 blur-3xl rounded-full" />
-        <div className="container-page relative text-center text-white">
-          <Reveal>
-            <p className="eyebrow">Contrata Nuestros Servicios</p>
-            <h2 className="mt-4 text-5xl md:text-7xl font-black text-white leading-tight max-w-4xl mx-auto">
-              Diseñemos juntos tu <span className="text-brand-red">plan de seguridad</span>.
-            </h2>
-            <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">
-              Solicita una cotización personalizada. Un asesor te contactará en menos de 24 horas con la mejor propuesta para tus necesidades.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Link to="/contacto" className="group inline-flex items-center gap-3 bg-brand-red text-white px-10 py-5 rounded-full font-black shadow-2xl shadow-red-500/30 hover:scale-105 transition-transform pulse-red">
-                Solicitar cotización
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <a href="tel:3174280680" className="inline-flex items-center gap-3 border border-white/40 text-white px-10 py-5 rounded-full font-bold hover:bg-white hover:text-brand-ink transition-colors">
-                Llamar ahora
-              </a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
     </PageShell>
   );
 }

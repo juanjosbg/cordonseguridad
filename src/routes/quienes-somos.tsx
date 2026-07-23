@@ -3,8 +3,9 @@ import { motion } from "motion/react";
 import { Target, Eye, Heart, Award, Users, Shield } from "lucide-react";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
-import teamImg from "@/assets/team.jpg";
-import heroImg from "@/assets/hero-guard.jpg";
+
+const heroImg = "/photos/IMG_0160.JPG";
+const teamImg = "/photos/IMG_0160.JPG";
 
 export const Route = createFileRoute("/quienes-somos")({
   head: () => ({

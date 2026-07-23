@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Shield } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 const links = [
   { to: "/", label: "Inicio" },
@@ -29,19 +29,23 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.08)]"
+          ? "rounded-b-[3.5rem] bg-white/95 shadow-[0_12px_35px_rgba(0,0,0,0.2)] backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
-      <div className="container-page flex h-24 items-center justify-between">
+      <div className={`container-page flex items-center justify-between transition-[height] duration-500 ${scrolled ? "h-28" : "h-24"}`}>
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className={`grid place-items-center h-11 w-11 rounded-lg transition-colors ${
-            scrolled ? "bg-brand-red" : "bg-brand-red"
-          }`}>
-            <Shield className="h-6 w-6 text-white" strokeWidth={2.5} />
-          </div>
+          <img
+            src={
+              scrolled
+                ? "/logo/CordonDeSeguridad_LogoSimbolo01.png"
+                : "/logo/CordonDeSeguridad_LogoSimbolo04.png"
+            }
+            alt="Símbolo de Cordón de Seguridad"
+            className="h-12 w-auto transition-opacity duration-300"
+          />
           <div className="leading-tight">
-            <div className={`text-[15px] font-black tracking-tight ${scrolled ? "text-brand-ink" : "text-white"}`}>
+            <div className={`text-[15px] font-black tracking-tight ${scrolled ? "text-black" : "text-white/90"}`}>
               CORDÓN DE
             </div>
             <div className={`text-[11px] font-bold tracking-widest ${scrolled ? "text-brand-red" : "text-white/90"}`}>
@@ -56,9 +60,9 @@ export function Navbar() {
               key={l.to}
               to={l.to}
               activeProps={{ className: "text-brand-red" }}
-              className={`text-sm font-semibold relative transition-colors hover:text-brand-red ${
-                scrolled ? "text-brand-ink" : "text-white"
-              }`}
+              className={`text-sm font-semibold relative transition-colors hover:text-brand-red 
+                ${scrolled ? "text-black" : "text-white/90"}
+              `}
             >
               {l.label}
             </Link>
@@ -71,12 +75,13 @@ export function Navbar() {
             className="inline-flex items-center gap-2 rounded-full bg-brand-red px-5 py-2.5 text-sm font-bold text-white transition-transform hover:scale-105 shadow-lg shadow-red-500/30"
           >
             Trabaja con Nosotros
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
 
         <button
           onClick={() => setOpen(!open)}
-          className={`lg:hidden p-2 rounded-md ${scrolled ? "text-brand-ink" : "text-white"}`}
+          className="rounded-md p-2 text-white lg:hidden"
           aria-label="Menu"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
