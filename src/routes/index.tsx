@@ -9,8 +9,10 @@ import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/control-room.jpg";
 import controlImg from "@/assets/control-room.jpg";
-import techImg from "@/assets/technology.jpg";
-import patrolImg from "@/assets/patrol.jpg";
+
+const techImg = "/photos-verticales/DSC07784.JPG";
+const patrolImg = "/photos-verticales/DSC06918.JPG";
+
 
 const teamImg = "/photos/DSC07775.JPG";
 
@@ -193,7 +195,8 @@ function HomePage() {
               <Reveal key={s.title} delay={i * 0.06}>
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="group h-full bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-brand-red hover:border-brand-red transition-colors relative overflow-hidden"
+                  className="group h-full bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-brand-red hover:border-brand-red 
+                  transition-colors relative overflow-hidden"
                 >
                   <div className="grid place-items-center h-14 w-14 rounded-xl bg-brand-red group-hover:bg-white/20 transition-colors mb-6">
                     <s.icon className="h-7 w-7 text-white" />

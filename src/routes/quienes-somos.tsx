@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Target, Eye, Heart, Award, Users, Shield } from "lucide-react";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
+import { PhotoGallery } from "@/components/PhotoGallery";
 
 const heroImg = "/photos/IMG_0160.JPG";
 const teamImg = "/photos/IMG_0160.JPG";
@@ -101,6 +102,8 @@ function Page() {
           </div>
         </div>
       </section>
+      {/* Slider */}
+      <PhotoGallery />
 
       {/* WHY US */}
       <section className="py-24">
