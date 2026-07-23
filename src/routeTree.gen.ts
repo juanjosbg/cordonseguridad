@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as PqrsRouteImport } from './routes/pqrs'
 import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
+import { Route as SarlaftSicofRouteImport } from './routes/sarlaft-sicof'
 import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TrabajeConNosotrosRouteImport } from './routes/trabaje-con-nosotros'
@@ -37,6 +38,11 @@ const QuienesSomosRoute = QuienesSomosRouteImport.update({
   path: '/quienes-somos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SarlaftSicofRoute = SarlaftSicofRouteImport.update({
+  id: '/sarlaft-sicof',
+  path: '/sarlaft-sicof',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiciosRoute = ServiciosRouteImport.update({
   id: '/servicios',
   path: '/servicios',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof ContactoRoute
   '/pqrs': typeof PqrsRoute
   '/quienes-somos': typeof QuienesSomosRoute
+  '/sarlaft-sicof': typeof SarlaftSicofRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/trabaje-con-nosotros': typeof TrabajeConNosotrosRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/contacto': typeof ContactoRoute
   '/pqrs': typeof PqrsRoute
   '/quienes-somos': typeof QuienesSomosRoute
+  '/sarlaft-sicof': typeof SarlaftSicofRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/trabaje-con-nosotros': typeof TrabajeConNosotrosRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/contacto': typeof ContactoRoute
   '/pqrs': typeof PqrsRoute
   '/quienes-somos': typeof QuienesSomosRoute
+  '/sarlaft-sicof': typeof SarlaftSicofRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/trabaje-con-nosotros': typeof TrabajeConNosotrosRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/pqrs'
     | '/quienes-somos'
+    | '/sarlaft-sicof'
     | '/servicios'
     | '/sitemap.xml'
     | '/trabaje-con-nosotros'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/pqrs'
     | '/quienes-somos'
+    | '/sarlaft-sicof'
     | '/servicios'
     | '/sitemap.xml'
     | '/trabaje-con-nosotros'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/pqrs'
     | '/quienes-somos'
+    | '/sarlaft-sicof'
     | '/servicios'
     | '/sitemap.xml'
     | '/trabaje-con-nosotros'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   ContactoRoute: typeof ContactoRoute
   PqrsRoute: typeof PqrsRoute
   QuienesSomosRoute: typeof QuienesSomosRoute
+  SarlaftSicofRoute: typeof SarlaftSicofRoute
   ServiciosRoute: typeof ServiciosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TrabajeConNosotrosRoute: typeof TrabajeConNosotrosRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuienesSomosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sarlaft-sicof': {
+      id: '/sarlaft-sicof'
+      path: '/sarlaft-sicof'
+      fullPath: '/sarlaft-sicof'
+      preLoaderRoute: typeof SarlaftSicofRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/servicios': {
       id: '/servicios'
       path: '/servicios'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactoRoute: ContactoRoute,
   PqrsRoute: PqrsRoute,
   QuienesSomosRoute: QuienesSomosRoute,
+  SarlaftSicofRoute: SarlaftSicofRoute,
   ServiciosRoute: ServiciosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TrabajeConNosotrosRoute: TrabajeConNosotrosRoute,

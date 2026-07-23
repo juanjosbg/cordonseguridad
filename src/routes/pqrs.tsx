@@ -84,6 +84,16 @@ function Page() {
               </Reveal>
             ))}
           </div>
+
+          <div className="mt-10 flex justify-center">
+            <a
+              href="#formulario-pqrs"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-red px-7 py-4 font-black text-white shadow-lg shadow-red-600/20 transition-transform hover:scale-[1.02]"
+            >
+              <Send className="h-5 w-5" />
+              Diligenciar formulario PQRS
+            </a>
+          </div>
         </div>
       </section>
 
@@ -124,7 +134,7 @@ function Page() {
       </section>
 
       {/* FORM */}
-      <section className="py-24 bg-gray-50">
+      <section id="formulario-pqrs" className="scroll-mt-28 bg-gray-50 py-24">
         <div className="container-page max-w-3xl">
           <Reveal>
             <div className="text-center">
@@ -167,12 +177,12 @@ function Page() {
               <textarea name="message" required rows={6} placeholder="Describe tu solicitud con el mayor detalle posible..." className="mt-4 w-full border border-gray-200 rounded-xl px-4 py-3 focus:border-brand-red outline-none resize-none" />
 
               <button type="submit" className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-red text-white px-6 py-4 rounded-full font-black hover:scale-[1.01] transition-transform">
-                <Send className="h-5 w-5" /> Enviar PQRS
+                <Send className="h-5 w-5" /> Enviar PQRS al correo institucional
               </button>
 
               {sent && (
                 <p className="mt-4 text-center text-sm text-brand-ink">
-                  ✓ Se abrió tu cliente de correo. La información llegará a informacion@cordonseguridadltda.com.co
+                  ✓ Se abrió tu aplicación de correo. Revisa el mensaje y confirma el envío a informacion@cordonseguridadltda.com.co
                 </p>
               )}
             </form>

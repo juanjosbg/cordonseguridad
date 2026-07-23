@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, Menu, X } from "lucide-react";
 
 const links = [
-  { to: "/", label: "Inicio" },
-  { to: "/quienes-somos", label: "Quiénes Somos" },
-  { to: "/servicios", label: "Servicios" },
+  { to: "/", label: "INICIO" },
+  { to: "/quienes-somos", label: "QUIÉNES SOMOS" },
+  { to: "/servicios", label: "SERVICIOS" },
+  { to: "/sarlaft-sicof", label: "SARLAFT-SICOF" },
   { to: "/pqrs", label: "PQRS" },
-  { to: "/contacto", label: "Contacto" },
+  { to: "/contacto", label: "CONTACTO" },
 ];
 
 export function Navbar() {
@@ -54,7 +55,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
           {links.map((l) => (
             <Link
               key={l.to}

@@ -11,6 +11,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/", priority: "1.0" },
           { path: "/quienes-somos", priority: "0.8" },
           { path: "/servicios", priority: "0.9" },
+          { path: "/sarlaft-sicof", priority: "0.8" },
           { path: "/pqrs", priority: "0.7" },
           { path: "/contacto", priority: "0.8" },
           { path: "/trabaje-con-nosotros", priority: "0.7" },

@@ -42,6 +42,7 @@ export function Footer() {
             <li><Link to="/" className="transition-colors hover:text-brand-red">Inicio</Link></li>
             <li><Link to="/quienes-somos" className="transition-colors hover:text-brand-red">Quiénes Somos</Link></li>
             <li><Link to="/servicios" className="transition-colors hover:text-brand-red">Servicios</Link></li>
+            <li><Link to="/sarlaft-sicof" className="transition-colors hover:text-brand-red">Sarlaft-sicof</Link></li>
             <li><Link to="/pqrs" className="transition-colors hover:text-brand-red">PQRS</Link></li>
             <li><Link to="/trabaje-con-nosotros" className="transition-colors hover:text-brand-red">Trabaja con Nosotros</Link></li>
             <li><Link to="/contacto" className="transition-colors hover:text-brand-red">Contacto</Link></li>
