@@ -34,6 +34,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
+      
       <div className={`container-page flex items-center justify-between transition-[height] duration-500 ${scrolled ? "h-28" : "h-24"}`}>
         <Link to="/" className="flex items-center gap-2.5 group">
           <img
