@@ -93,9 +93,8 @@ function HomePage() {
             transition={{ delay: 0.9, duration: 0.7 }}
             className="mt-8 max-w-xl text-lg text-white/80"
           >
-            Empresa de vigilancia y seguridad privada en Cali. <br/>
-            Soluciones proactivas e integrales para las empresas del sector público y privado.
-          </motion.p>
+            Empresa de vigilancia y seguridad privada en Cali. <br />
+            Soluciones integrales y proactivas para organizaciones de los sectores público y privado.          </motion.p>
         </motion.div>
 
         <motion.div
@@ -150,7 +149,7 @@ function HomePage() {
               {[
                 { n: "24/7", l: "Operación" },
                 { n: "100%", l: "Certificados" },
-                { n: "+15", l: "Años Experiencia" },
+                { n: "+3", l: "Años Experiencia" },
               ].map((s) => (
                 <div key={s.l} className="border-l-2 border-brand-red pl-4">
                   <div className="text-3xl font-black text-brand-ink">{s.n}</div>
