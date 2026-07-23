@@ -82,9 +82,14 @@ function Page() {
 
                 <textarea name="message" rows={5} placeholder="Cuéntanos sobre ti..." className="mt-4 w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 focus:border-brand-red outline-none placeholder:text-white/50 resize-none" />
 
-                <div className="mt-4 flex items-center gap-3 text-sm text-white/70">
-                  <Upload className="h-4 w-4 text-brand-red" />
-                  Al enviar, adjunta tu hoja de vida en el correo que se abrirá.
+                <div className="mt-4 flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">
+                  <Upload className="mt-0.5 h-5 w-5 shrink-0 text-brand-red" />
+                  <p>
+                    <span className="font-bold text-white">Adjunta tu CV u hoja de vida.</span>{" "}
+                    Al enviar este formulario se abrirá tu aplicación de correo.
+                    Antes de enviar el mensaje, adjunta el archivo en formato PDF
+                    o Word.
+                  </p>
                 </div>
 
                 <button type="submit" className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-red text-white px-6 py-4 rounded-full font-black hover:scale-[1.01] transition-transform">
@@ -93,7 +98,8 @@ function Page() {
 
                 {sent && (
                   <p className="mt-4 text-center text-sm text-white/80">
-                    ✓ Se abrió tu cliente de correo. Recuerda adjuntar tu CV.
+                    ✓ Se abrió tu aplicación de correo. Adjunta tu CV u hoja de
+                    vida antes de confirmar el envío.
                   </p>
                 )}
               </div>
