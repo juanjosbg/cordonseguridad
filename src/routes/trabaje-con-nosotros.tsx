@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Briefcase, GraduationCap, HeartHandshake, Send, Upload } from "lucide-react";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
-import teamImg from "@/assets/team.jpg";
+
+const teamImg = "/photos/ewe.jpg";
 
 export const Route = createFileRoute("/trabaje-con-nosotros")({
   head: () => ({
