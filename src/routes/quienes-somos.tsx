@@ -121,34 +121,30 @@ function HistoryScroll() {
                     : { opacity: 0, y: -55, scale: 0.96 }
                 }
                 transition={{ duration: reduceMotion ? 0.15 : 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className={`relative w-full pl-16 ${
-                  step.closing ? "text-white" : ""
-                }`}
+                className={`relative w-full pl-16 ${step.closing ? "text-white" : ""
+                  }`}
               >
                 <div
-                  className={`absolute left-0 top-1 grid h-12 w-12 place-items-center rounded-full border text-sm font-black shadow-[0_0_0_8px_rgba(207,18,45,0.08)] ${
-                    step.closing
+                  className={`absolute left-0 top-1 grid h-12 w-12 place-items-center rounded-full border text-sm font-black shadow-[0_0_0_8px_rgba(207,18,45,0.08)] ${step.closing
                       ? "border-white/40 bg-brand-red text-white"
                       : "border-brand-red/40 bg-white text-brand-red"
-                  }`}
+                    }`}
                 >
                   {String(activeStep + 1).padStart(2, "0")}
                 </div>
 
                 <div
-                  className={`rounded-3xl border p-6 shadow-2xl md:p-9 ${
-                    step.closing
+                  className={`rounded-3xl border p-6 shadow-2xl md:p-9 ${step.closing
                       ? "border-brand-red bg-brand-red shadow-red-950/30"
                       : "border-gray-200 bg-white/90 shadow-black/10 backdrop-blur-sm"
-                  }`}
+                    }`}
                 >
                   {step.closing ? (
                     <ShieldCheck className="mb-5 h-8 w-8 text-white" />
                   ) : null}
                   <p
-                    className={`text-sm leading-7 md:text-base md:leading-8 ${
-                      step.closing ? "text-white/90" : "text-brand-ink"
-                    }`}
+                    className={`text-sm leading-7 md:text-base md:leading-8 ${step.closing ? "text-white/90" : "text-brand-ink"
+                      }`}
                   >
                     {step.text}
                   </p>
@@ -160,11 +156,10 @@ function HistoryScroll() {
               {historySteps.map((historyStep, index) => (
                 <span
                   key={historyStep.text}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    index === activeStep
+                  className={`h-1.5 rounded-full transition-all duration-300 ${index === activeStep
                       ? "w-8 bg-brand-red"
                       : "w-3 bg-brand-ink/25"
-                  }`}
+                    }`}
                   aria-hidden="true"
                 />
               ))}
@@ -211,7 +206,7 @@ function Page() {
               </p>
             </div>
           </Reveal>
-
+          {/*  MISIÓN - VISIÓN */}
           <div className="mt-14 grid gap-8 lg:grid-cols-2">
             <Reveal>
               <div className="relative h-full overflow-hidden rounded-3xl bg-brand-ink p-10 text-white shadow-xl">
