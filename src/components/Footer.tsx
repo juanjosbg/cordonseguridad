@@ -54,12 +54,20 @@ export function Footer() {
             <h3 className="font-black text-white">Sede Cali:</h3>
             <p>Avenida 5 Norte # 22N-26, Piso 6.</p>
             <p>Barrio San Vicente, Cali, Valle.</p>
-            <a
-              href="tel:3174280680"
-              className="transition-colors hover:text-brand-red"
-            >
-              Tel: 317 428 0680
-            </a>
+            <div className="flex flex-col">
+              <a
+                href="tel:3173699142"
+                className="transition-colors hover:text-brand-red"
+              >
+                Tel: 317 369 9142
+              </a>
+              <a
+                href="tel:3174300680"
+                className="transition-colors hover:text-brand-red"
+              >
+                Tel: 317 430 0680
+              </a>
+            </div>
             <a
               href="mailto:informacion@cordonseguridadltda.com.co"
               className="mt-4 block break-all transition-colors hover:text-brand-red"
