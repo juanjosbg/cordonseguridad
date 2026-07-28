@@ -36,24 +36,17 @@ export function Navbar() {
     >
       
       <div className={`container-page flex items-center justify-between transition-[height] duration-500 ${scrolled ? "h-28" : "h-24"}`}>
-        <Link to="/" className="flex items-center gap-2.5 group">
+        <Link
+          to="/"
+          className="group flex items-center px-3 py-2" aria-label="Cordón de Seguridad Ltda — Inicio"
+        >
           <img
-            src={
-              scrolled
-                ? "/logo/CordonDeSeguridad_LogoSimbolo01.png"
-                : "/logo/CordonDeSeguridad_LogoSimbolo04.png"
-            }
-            alt="Símbolo de Cordón de Seguridad"
-            className="h-12 w-auto transition-opacity duration-300"
+            src="/logo/CordonDeSeguridad_Horizontal.png"
+            alt="Cordón de Seguridad Ltda"
+            width="420"
+            height="142"
+            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
           />
-          <div className="leading-tight">
-            <div className={`text-[15px] font-black tracking-tight ${scrolled ? "text-black" : "text-white/90"}`}>
-              CORDÓN DE
-            </div>
-            <div className={`text-[11px] font-bold tracking-widest ${scrolled ? "text-brand-red" : "text-white/90"}`}>
-              SEGURIDAD LTDA
-            </div>
-          </div>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
