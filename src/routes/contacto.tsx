@@ -61,7 +61,6 @@ function Page() {
                       <div className="text-xs uppercase tracking-widest text-brand-red font-bold">Teléfono</div>
                       <div className="flex flex-col">
                         <a href="tel:3173699142" className="text-lg font-semibold text-white">317 369 9142</a>
-                        <a href="tel:3174300680" className="text-lg font-semibold text-white">317 430 0680</a>
                       </div>
                     </div>
                   </li>

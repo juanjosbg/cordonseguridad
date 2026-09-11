@@ -61,12 +61,6 @@ export function Footer() {
               >
                 Tel: 317 369 9142
               </a>
-              <a
-                href="tel:3174300680"
-                className="transition-colors hover:text-brand-red"
-              >
-                Tel: 317 430 0680
-              </a>
             </div>
             <a
               href="mailto:informacion@cordonseguridadltda.com.co"

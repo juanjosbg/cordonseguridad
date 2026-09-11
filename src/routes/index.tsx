@@ -303,9 +303,6 @@ function HomePage() {
                 <a href="tel:3173699142" className="inline-flex items-center gap-3 bg-white text-brand-red px-8 py-3 rounded-full font-black shadow-2xl hover:scale-105 transition-transform">
                   <Phone className="h-5 w-5" /> 317 369 9142
                 </a>
-                <a href="tel:3174300680" className="inline-flex items-center gap-3 bg-white text-brand-red px-8 py-3 rounded-full font-black shadow-2xl hover:scale-105 transition-transform">
-                  <Phone className="h-5 w-5" /> 317 430 0680
-                </a>
               </div>
               <a href="mailto:informacion@cordonseguridadltda.com.co" className="inline-flex items-center gap-3 border border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-red transition-colors">
                 <Mail className="h-5 w-5" /> Escríbenos
